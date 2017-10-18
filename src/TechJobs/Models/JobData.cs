@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
@@ -89,7 +90,7 @@ namespace TechJobs.Models
 
             foreach (Dictionary<string, string> row in AllJobs)
             {
-                string aValue = row[column];
+                string aValue = row[column]; //aValue is the values found under a category (the category being the column)
 
                 if (aValue.ToLower().Contains(value.ToLower()))
                 {
